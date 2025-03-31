@@ -3,7 +3,7 @@ import { useState, useContext } from "react";
 import {
   FaGithub, FaLinkedin, FaEnvelope, FaExternalLinkAlt,
   FaCode, FaReact, FaServer, FaPlug,
-  FaDatabase, FaCloud, FaGitAlt, FaLinux,
+  FaDatabase, FaCloud, FaGitAlt,
   FaBars, FaTimes, FaMoon, FaSun
 } from "react-icons/fa";
 import { Link } from "react-scroll";
@@ -88,14 +88,13 @@ const projects = [
 ];
 
 const skillGroups = {
-  "Programming Languages": ["Java", "Python", "JavaScript", "TypeScript", "SQL"],
-  "Frontend Development": ["HTML", "CSS", "React.js", "Next.js", "Tailwind CSS", "Material UI"],
-  "Backend Development": ["Node.js", "Express.js", "Spring Boot", "Django"],
-  "APIs & Services": ["REST APIs", "GraphQL", "Firebase"],
-  "Databases": ["MySQL", "PostgreSQL", "MongoDB", "SQLite"],
+  "Programming Languages": ["Java (DSA)", "JavaScript", "TypeScript"],
+  "Frontend Development": ["React.js", "Next.js", "Tailwind CSS"],
+  "Backend Development": ["Node.js", "Express.js"],
+  "APIs & Services": ["REST APIs"],
+  "Databases": ["MySQL", "PostgreSQL", "MongoDB"],
   "DevOps & Cloud": ["Docker", "AWS EC2", "CI/CD Pipelines"],
-  "Version Control & Tools": ["Git", "GitHub", "VS Code"],
-  "Operating Systems": ["Linux (Debian)", "Windows"]
+  "Version Control & Tools": ["Git", "GitHub"],
 };
 
 const App = () => {
@@ -112,7 +111,6 @@ const App = () => {
       "Databases": <FaDatabase size={24} style={{ color: colors.primary }} />,
       "DevOps & Cloud": <FaCloud size={24} style={{ color: colors.primary }} />,
       "Version Control & Tools": <FaGitAlt size={24} style={{ color: colors.primary }} />,
-      "Operating Systems": <FaLinux size={24} style={{ color: colors.primary }} />
     };
     return icons[category] || <FaCode size={24} style={{ color: colors.primary }} />;
   };
