@@ -16,6 +16,8 @@ import mdEditor from "./assets/mdeditor.jpg";
 import anonChat from "./assets/anonchat.jpg";
 import aiChatbot from "./assets/aichatbot.jpg";
 import portfolioPic from "./assets/portfolio.jpg";
+import artCraftEcom from './assets/artCraftEcom.jpg';
+import jmoExports from './assets/jmoExports.jpg';
 import chitkaraLogo from "./assets/chitkara.jpg";
 import schoolLogo from "./assets/school.jpg";
 import codingIllustration from "./assets/coding.svg";
@@ -346,6 +348,7 @@ const App = () => {
 
   // Enhanced projects data
   const projects = [
+
     {
       title: "HomeEase",
       icon: "🏠",
@@ -355,40 +358,41 @@ const App = () => {
       live: "https://homeease-oa77.onrender.com/",
       tags: ["React", "Node.js", "MongoDB", "Express", "JWT Auth"],
       features: [
-        "Secure payment integration with Razorpay",
-        "Role-based authentication (User/Service Provider/Admin)",
+        "Role-based authentication (User or Worker)",
         "Real-time booking management system",
-        "Service provider rating and review system"
+        "Worker rating and review system",
+        "Planned Secure payment integration with Razorpay"
       ]
     },
     {
-      title: "MDeditor",
-      icon: "📝",
-      description: "Minimal Markdown editor with live rendering and syntax highlighting for developers.",
-      img: mdEditor,
-      github: "https://github.com/SharadJ19/mdeditor",
-      live: "https://mdeditor.onrender.com/",
-      tags: ["React", "JavaScript", "Markdown"],
+      title: "Art & Craft E-commerce Platform",
+      icon: "🎨🛍️",
+      description: "Full-stack MERN (MySQL variant) e-commerce platform for art and craft supplies.",
+      img: artCraftEcom,
+      github: "https://github.com/sharadj19/art-and-craft-ecom",
+      live: "https://artcraft.onrender.com/",
+      tags: ["React", "Node.js", "Express", "MySQL", "JWT Auth", "Tailwind CSS"],
       features: [
-        "Live Markdown preview with syntax highlighting",
-        "Download markdown as HTML or PDF",
-        "Local storage for document persistence",
+        "User authentication and account management",
+        "Product browsing with search and filtering",
+        "Shopping cart and secure checkout",
+        "Admin dashboard for inventory management",
         "Responsive design for all devices"
       ]
     },
     {
-      title: "AnonChat",
-      icon: "💬",
-      description: "Anonymous chat application with live polling and real-time messaging capabilities.",
-      img: anonChat,
-      github: "https://github.com/SharadJ19/anonchat",
-      live: "https://anonchat-w4dw.onrender.com/",
-      tags: ["Socket.io", "Express", "React", "Real-time"],
+      title: "JMO Exports Website",
+      icon: "🌐",
+      description: "Company website made for Jaunt Merchandise Overseas built with React, Tailwind, and Framer Motion.",
+      img: jmoExports,
+      github: "https://github.com/sharad/jmo-exports",
+      live: "https://jmo.vercel.app/",
+      tags: ["React", "Tailwind CSS", "Framer Motion", "EmailJS"],
       features: [
-        "Real-time anonymous chat rooms",
-        "Live polling feature with results visualization",
-        "No user data collection or storage",
-        "Simple room creation and joining"
+        "Smooth scroll animations",
+        "Mobile-friendly responsive design",
+        "Product showcase section",
+        "Working contact form using EmailJS",
       ]
     },
     {
@@ -402,8 +406,35 @@ const App = () => {
       features: [
         "Integration with Google's Gemini AI",
         "Conversation history and context retention",
-        "Markdown response formatting",
-        "Customizable personality and tone"
+        "Markdown response formatting"
+      ]
+    },
+    {
+      title: "AnonChat",
+      icon: "💬",
+      description: "Anonymous chat application with live polling and real-time messaging capabilities.",
+      img: anonChat,
+      github: "https://github.com/SharadJ19/anonchat",
+      live: "https://anonchat-w4dw.onrender.com/",
+      tags: ["Socket.io", "Express", "React", "Real-time"],
+      features: [
+        "Real-time anonymous chat rooms",
+        "Live polling feature with results visualization",
+        "No user data collection or storage"
+      ]
+    },
+    {
+      title: "MDeditor",
+      icon: "📝",
+      description: "Minimal Markdown editor with live rendering and syntax highlighting for developers.",
+      img: mdEditor,
+      github: "https://github.com/SharadJ19/mdeditor",
+      live: "https://mdeditor.onrender.com/",
+      tags: ["React", "MongoDB", "JavaScript", "Markdown"],
+      features: [
+        "Live Markdown preview with syntax highlighting",
+        "MongoDB for cloud storage",
+        "Save a file or load a file by title"
       ]
     },
     {
@@ -417,11 +448,13 @@ const App = () => {
       features: [
         "Dark/light mode toggle",
         "Smooth scroll navigation",
-        "Project showcase with filtering",
+        "Project showcase",
         "Responsive design for all devices"
       ]
-    },
+    }
   ];
+
+
 
   // Enhanced skills data
   const skillGroups = {
