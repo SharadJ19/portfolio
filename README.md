@@ -32,7 +32,7 @@
 
 | 🌙 Dark Mode (Default)                                                                             | ☀️ Light Mode                                                                                       |
 | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| ![Dark Home Page](https://github.com/user-attachments/assets/dd61b432-79b8-4969-9be8-f28068adfdb1) | ![Light Home Page](https://github.com/user-attachments/assets/5ff5fb3d-e49f-45f7-bbed-392b4fd427e3) |
+| ![Dark Home Page](https://github.com/user-attachments/assets/eb9b097a-a464-49a9-831a-0f661efd327a) | ![Light Home Page](https://github.com/user-attachments/assets/a2edd913-5bae-456a-8398-af775bfbf4b2) |
 
 ## 🛠️ Installation
 
