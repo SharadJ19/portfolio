@@ -693,7 +693,7 @@ const App = () => {
               </Link>
 
               <a
-                href="/Sharad_2211981360_FullStack_Resume.pdf"
+                href="/Sharad_Chandel_SE_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer flex items-center gap-2 px-8 py-3 rounded-full font-medium border-2 transition-transform hover:scale-105"
@@ -709,8 +709,8 @@ const App = () => {
 
               {/* Download CV Button */}
               <a
-                href="/Sharad_2211981360_FullStack_Resume.pdf"
-                download="Sharad_Chandel_Resume.pdf"
+                href="/Sharad_Chandel_SE_Resume.pdf"
+                download="Sharad_Chandel_SE_Resume.pdf"
                 className="cursor-pointer flex items-center gap-2 px-8 py-3 rounded-full font-medium border-2 transition-transform hover:scale-105"
                 style={{
                   borderColor: 'var(--primary)',
