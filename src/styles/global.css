@@ -1,0 +1,106 @@
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--tokyo-bg);
+  color: var(--tokyo-text-main);
+  font-family: var(--font-ui);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--tokyo-cyan);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--tokyo-blue);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Visible keyboard focus everywhere, Tokyo Night styled */
+:focus-visible {
+  outline: 2px solid var(--tokyo-cyan);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Custom scrollbar, dark-theme matched ---- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--tokyo-border) var(--tokyo-bg);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--tokyo-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--tokyo-border);
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--tokyo-bg);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--tokyo-text-dim);
+}
+
+::selection {
+  background: var(--tokyo-purple);
+  color: var(--tokyo-bg);
+}

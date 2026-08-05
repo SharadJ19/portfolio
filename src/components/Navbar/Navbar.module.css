@@ -1,0 +1,102 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-6);
+  background: rgba(26, 27, 38, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: var(--border-thin);
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.prompt {
+  font-family: var(--font-mono);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-medium);
+  color: var(--tokyo-cyan);
+}
+
+.prompt::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 1.1em;
+  margin-left: 4px;
+  background: var(--tokyo-cyan);
+  vertical-align: text-bottom;
+  animation: blink 1.1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.osBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  border: var(--border-thin);
+  background: var(--tokyo-bg-surface);
+  color: var(--tokyo-text-dim);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+}
+
+.toggleGroup {
+  display: inline-flex;
+  padding: var(--space-1);
+  gap: var(--space-1);
+  background: var(--tokyo-bg-surface);
+  border: var(--border-thin);
+  border-radius: var(--radius-md);
+}
+
+.toggleBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--tokyo-text-muted);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.toggleBtn:hover {
+  color: var(--tokyo-text-main);
+}
+
+.toggleBtn.active {
+  background: var(--tokyo-bg-highlight);
+  color: var(--tokyo-cyan);
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    justify-content: center;
+  }
+  .osBadge {
+    display: none;
+  }
+}

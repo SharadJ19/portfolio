@@ -1,0 +1,307 @@
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6) var(--space-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+/* ---- Hero ---- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-bottom: var(--space-6);
+  border-bottom: var(--border-thin);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--tokyo-text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.name {
+  font-size: var(--fs-3xl);
+  color: var(--tokyo-text-main);
+  background: linear-gradient(90deg, var(--tokyo-cyan), var(--tokyo-purple));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.role {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
+  color: var(--tokyo-text-muted);
+}
+
+.tagline {
+  max-width: 60ch;
+  color: var(--tokyo-text-muted);
+  font-size: var(--fs-md);
+  margin-top: var(--space-2);
+}
+
+.contactRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  color: var(--tokyo-text-muted);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  border: var(--border-thin);
+  background: var(--tokyo-bg-surface);
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.contactLink:hover {
+  color: var(--tokyo-cyan);
+  border-color: var(--tokyo-cyan);
+}
+
+/* ---- Sections ---- */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-lg);
+  color: var(--tokyo-text-main);
+}
+
+/* ---- Skills ---- */
+.skillGroups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-5);
+}
+
+.skillGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.skillCategory {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--tokyo-text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.skillBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* ---- Timeline / experience cards ---- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.expCard {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--tokyo-bg-surface);
+  border: var(--border-thin);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.expIcon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: var(--tokyo-bg-highlight);
+  color: var(--tokyo-cyan);
+}
+
+.expBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+  min-width: 0;
+}
+
+.expHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.expRole {
+  font-size: var(--fs-md);
+  color: var(--tokyo-text-main);
+}
+
+.expPeriod {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--tokyo-text-dim);
+  white-space: nowrap;
+}
+
+.expCompany {
+  color: var(--tokyo-purple);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+}
+
+.expList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+}
+
+.expList li {
+  position: relative;
+  padding-left: var(--space-4);
+  font-size: var(--fs-sm);
+  color: var(--tokyo-text-muted);
+  line-height: var(--lh-normal);
+}
+
+.expList li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--tokyo-green);
+}
+
+/* ---- Projects ---- */
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-5);
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  background: var(--tokyo-bg-surface);
+  border: var(--border-thin);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition:
+    border-color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.projectCard:hover {
+  border-color: var(--tokyo-purple);
+  transform: translateY(-2px);
+}
+
+.projectHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--tokyo-purple);
+}
+
+.projectName {
+  font-size: var(--fs-md);
+  color: var(--tokyo-text-main);
+}
+
+.projectSubtitle {
+  font-size: var(--fs-sm);
+  color: var(--tokyo-text-dim);
+  font-style: italic;
+}
+
+.projectDesc {
+  font-size: var(--fs-sm);
+  color: var(--tokyo-text-muted);
+}
+
+.projectLinks {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+/* ---- Education ---- */
+.eduCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  background: var(--tokyo-bg-surface);
+  border: var(--border-thin);
+  border-radius: var(--radius-lg);
+}
+
+.eduHeader {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.eduDegree {
+  font-size: var(--fs-md);
+  color: var(--tokyo-text-main);
+  font-weight: var(--fw-medium);
+}
+
+.eduPeriod {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--tokyo-text-dim);
+}
+
+.eduInstitution {
+  color: var(--tokyo-purple);
+  font-size: var(--fs-sm);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  .wrapper {
+    padding: var(--space-6) var(--space-4) var(--space-10);
+  }
+  .name {
+    font-size: var(--fs-2xl);
+  }
+  .expCard {
+    flex-direction: column;
+  }
+}
