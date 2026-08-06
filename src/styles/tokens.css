@@ -5,9 +5,7 @@
    ever hardcode a hex value or a raw px spacing number.
    ========================================================================== */
 
-/* ---- Fonts ----
-
-------------------------------------------------------------------------- */
+/* ---- Fonts ---- */
 @font-face {
   font-family: 'Netflix Sans';
   src: url('/fonts/NetflixSans-Regular.ttf') format('truetype');

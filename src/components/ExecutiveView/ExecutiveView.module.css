@@ -1,5 +1,5 @@
 .wrapper {
-  max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: var(--space-8) var(--space-6) var(--space-12);
   display: flex;
@@ -11,9 +11,36 @@
 .hero {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-5);
   padding-bottom: var(--space-6);
   border-bottom: var(--border-thin);
+}
+
+.heroTop {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.avatarContainer {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--tokyo-border);
+  box-shadow: var(--shadow-card), var(--shadow-glow-cyan);
+}
+
+.heroInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
 }
 
 .eyebrow {
@@ -25,6 +52,7 @@
   color: var(--tokyo-text-dim);
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  margin-bottom: var(--space-1);
 }
 
 .name {
@@ -34,26 +62,28 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  line-height: var(--lh-tight);
 }
 
 .role {
   font-size: var(--fs-lg);
   font-weight: var(--fw-medium);
   color: var(--tokyo-text-muted);
+  margin-top: var(--space-1);
 }
 
 .tagline {
-  max-width: 60ch;
+  max-width: 68ch;
   color: var(--tokyo-text-muted);
   font-size: var(--fs-md);
-  margin-top: var(--space-2);
+  line-height: var(--lh-normal);
 }
 
 .contactRow {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
-  margin-top: var(--space-4);
+  margin-top: var(--space-1);
 }
 
 .contactLink {
@@ -94,7 +124,7 @@
 /* ---- Skills ---- */
 .skillGroups {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: var(--space-5);
 }
 
@@ -204,15 +234,14 @@
 
 /* ---- Projects ---- */
 .projectGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
 }
 
 .projectCard {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-4);
   padding: var(--space-5);
   background: var(--tokyo-bg-surface);
   border: var(--border-thin);
@@ -228,11 +257,19 @@
   transform: translateY(-2px);
 }
 
+.projectBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+  min-width: 0;
+}
+
 .projectHeader {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: var(--space-2);
-  color: var(--tokyo-purple);
 }
 
 .projectName {
@@ -241,14 +278,15 @@
 }
 
 .projectSubtitle {
+  color: var(--tokyo-purple);
   font-size: var(--fs-sm);
-  color: var(--tokyo-text-dim);
-  font-style: italic;
+  font-weight: var(--fw-medium);
 }
 
 .projectDesc {
   font-size: var(--fs-sm);
   color: var(--tokyo-text-muted);
+  line-height: var(--lh-normal);
 }
 
 .projectLinks {
@@ -293,15 +331,42 @@
   font-size: var(--fs-sm);
 }
 
-/* ---- Responsive ---- */
-@media (max-width: 640px) {
+/* ---- Ultra Responsive Breakpoints for Target Devices ---- */
+@media (max-width: 480px) {
   .wrapper {
-    padding: var(--space-6) var(--space-4) var(--space-10);
+    padding: var(--space-4) var(--space-3) var(--space-8);
+    gap: var(--space-6);
+  }
+  .heroTop {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .eyebrow {
+    justify-content: center;
   }
   .name {
-    font-size: var(--fs-2xl);
+    font-size: var(--fs-xl);
+  }
+  .role {
+    font-size: var(--fs-base);
+  }
+  .tagline {
+    font-size: var(--fs-sm);
+    text-align: center;
   }
   .expCard {
     flex-direction: column;
+    padding: var(--space-3);
+  }
+  .projectCard {
+    flex-direction: column;
+    padding: var(--space-3);
+  }
+  .skillGroups {
+    grid-template-columns: 1fr;
+  }
+  .projectGrid {
+    grid-template-columns: 1fr;
   }
 }

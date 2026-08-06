@@ -1,4 +1,4 @@
-import { MapPin, Mail, ExternalLink, Code2 } from 'lucide-react';
+import { MapPin, Mail, Phone, Code2 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../common/Icons';
 import { profile, skills, experience, projects, education } from '../../data/profileData';
 import type { Skills } from '../../types/profile';
@@ -12,17 +12,31 @@ export default function ExecutiveView() {
     <div className={styles.wrapper}>
       {/* Hero */}
       <section className={styles.hero}>
-        <p className={styles.eyebrow}>
-          <MapPin size={14} />
-          {profile.location}
-        </p>
-        <h1 className={styles.name}>{profile.name}</h1>
-        <h2 className={styles.role}>{profile.role}</h2>
+        <div className={styles.heroTop}>
+          <div className={styles.avatarContainer}>
+            <img src='/avatar.webp' alt={profile.name} className={styles.avatar} />
+          </div>
+          <div className={styles.heroInfo}>
+            <p className={styles.eyebrow}>
+              <MapPin size={14} />
+              {profile.location}
+            </p>
+            <h1 className={styles.name}>{profile.name}</h1>
+            <h2 className={styles.role}>{profile.role}</h2>
+          </div>
+        </div>
+
         <p className={styles.tagline}>{profile.tagline}</p>
 
         <div className={styles.contactRow}>
           <a href={`mailto:${profile.email}`} className={styles.contactLink}>
             <Mail size={16} /> Email
+          </a>
+          <a
+            href={`tel:${profile.phone.replace(/\s+/g, '')}`}
+            className={styles.contactLink}
+          >
+            <Phone size={16} /> {profile.phone}
           </a>
           <a
             href={profile.links.github}
@@ -39,14 +53,6 @@ export default function ExecutiveView() {
             className={styles.contactLink}
           >
             <LinkedinIcon size={16} /> LinkedIn
-          </a>
-          <a
-            href={profile.links.website}
-            target='_blank'
-            rel='noreferrer'
-            className={styles.contactLink}
-          >
-            <ExternalLink size={16} /> Website
           </a>
         </div>
       </section>

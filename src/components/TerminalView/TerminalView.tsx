@@ -3,7 +3,7 @@ import { runCommand } from '../../data/terminalCommands';
 import { profile } from '../../data/profileData';
 import styles from './TerminalView.module.css';
 
-const WELCOME = `Welcome to ${profile.name}'s terminal.\nType 'help' to see available commands.`;
+const WELCOME = `Welcome to ${profile.name}'s interactive shell environment.\nType 'help' to list available system utilities and commands.`;
 
 interface HistoryItem {
   type: 'command' | 'output';
@@ -31,7 +31,8 @@ export default function TerminalView() {
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
     const trimmed = input;
-    const result = runCommand(trimmed);
+    const updatedLog = trimmed.trim() !== '' ? [...commandLog, trimmed] : commandLog;
+    const result = runCommand(trimmed, updatedLog);
 
     if (result.type === 'clear') {
       setHistory([]);
@@ -44,7 +45,7 @@ export default function TerminalView() {
     }
 
     if (trimmed.trim() !== '') {
-      setCommandLog((prev) => [...prev, trimmed]);
+      setCommandLog(updatedLog);
     }
     setLogIndex(-1);
     setInput('');

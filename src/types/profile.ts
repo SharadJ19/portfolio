@@ -6,7 +6,6 @@ export interface ProfileLinks {
   linkedin: string;
   github: string;
   leetcode: string;
-  website: string;
 }
 
 export interface Profile {
