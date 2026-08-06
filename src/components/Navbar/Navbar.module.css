@@ -11,13 +11,14 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: var(--border-thin);
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .brand {
   display: flex;
   align-items: center;
   gap: var(--space-3);
+  flex-shrink: 0;
 }
 
 .prompt {
@@ -64,13 +65,14 @@
   background: var(--tokyo-bg-surface);
   border: var(--border-thin);
   border-radius: var(--radius-md);
+  flex-shrink: 0;
 }
 
 .toggleBtn {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  padding: var(--space-2) var(--space-4);
+  padding: var(--space-2) var(--space-3);
   border: none;
   border-radius: var(--radius-sm);
   background: transparent;
@@ -92,9 +94,18 @@
   box-shadow: var(--shadow-glow-cyan);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .navbar {
-    justify-content: center;
+    padding: var(--space-3) var(--space-4);
+    gap: var(--space-2);
+  }
+  .prompt {
+    font-size: var(--fs-sm);
+  }
+  .toggleBtn {
+    padding: var(--space-1.5) var(--space-2.5);
+    font-size: var(--fs-xs);
+    gap: var(--space-1);
   }
   .osBadge {
     display: none;
