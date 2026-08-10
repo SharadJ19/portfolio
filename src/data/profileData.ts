@@ -17,6 +17,8 @@ export const profile: Profile = {
     linkedin: 'https://linkedin.com/in/sharadchandel2005',
     github: 'https://github.com/SharadJ19',
     leetcode: 'https://leetcode.com/u/SharadChandel',
+    resume:
+      'https://drive.google.com/file/d/14UuJbtOslJrUlJnT87qYrNb4ILR_c9uh/view?usp=sharing',
   },
   tagline:
     'Full-stack engineer building fast, scalable web platforms — from micro-frontend systems to real-time, event-driven apps.',

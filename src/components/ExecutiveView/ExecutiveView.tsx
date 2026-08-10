@@ -1,4 +1,4 @@
-import { MapPin, Mail, Phone, Code2 } from 'lucide-react';
+import { MapPin, Mail, Phone, Code2, FileText } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../common/Icons';
 import { profile, skills, experience, projects, education } from '../../data/profileData';
 import type { Skills } from '../../types/profile';
@@ -29,6 +29,30 @@ export default function ExecutiveView() {
         <p className={styles.tagline}>{profile.tagline}</p>
 
         <div className={styles.contactRow}>
+          <a
+            href={profile.links.resume}
+            target='_blank'
+            rel='noreferrer'
+            className={styles.contactLink}
+          >
+            <FileText size={16} /> Resume
+          </a>
+          <a
+            href={profile.links.linkedin}
+            target='_blank'
+            rel='noreferrer'
+            className={styles.contactLink}
+          >
+            <LinkedinIcon size={16} /> LinkedIn
+          </a>
+          <a
+            href={profile.links.github}
+            target='_blank'
+            rel='noreferrer'
+            className={styles.contactLink}
+          >
+            <GithubIcon size={16} /> GitHub
+          </a>
           <a href={`mailto:${profile.email}`} className={styles.contactLink}>
             <Mail size={16} /> Email
           </a>
@@ -39,20 +63,12 @@ export default function ExecutiveView() {
             <Phone size={16} /> {profile.phone}
           </a>
           <a
-            href={profile.links.github}
+            href={profile.links.leetcode}
             target='_blank'
             rel='noreferrer'
             className={styles.contactLink}
           >
-            <GithubIcon size={16} /> GitHub
-          </a>
-          <a
-            href={profile.links.linkedin}
-            target='_blank'
-            rel='noreferrer'
-            className={styles.contactLink}
-          >
-            <LinkedinIcon size={16} /> LinkedIn
+            <Code2 size={16} /> LeetCode
           </a>
         </div>
       </section>
