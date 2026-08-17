@@ -7,6 +7,36 @@ interface Props {
   image?: string;
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sharad Chandel",
+  "url": "https://sharad.is-a.dev",
+  "image": "https://sharad.is-a.dev/avatar.webp",
+  "jobTitle": "Full-Stack Software Engineer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Quark Software Inc."
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Chitkara University"
+  },
+  "sameAs": [
+    "https://linkedin.com/in/sharadchandel2005",
+    "https://github.com/SharadJ19",
+    "https://leetcode.com/u/SharadChandel"
+  ],
+  "knowsAbout": [
+    "Data Structures & Algorithms",
+    "Full-Stack Web Development",
+    "React",
+    "Node.js",
+    "TypeScript",
+    "PostgreSQL"
+  ]
+};
+
 const {
   title = "Sharad Chandel - Full-Stack Software Engineer Portfolio",
   description = "Full-stack engineer building fast, scalable web platforms - from micro-frontend systems to real-time, event-driven apps.",
@@ -28,6 +58,8 @@ const socialImageURL = new URL(image, canonicalURL);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
 
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    
     {/* ---- Open Graph / Social Media Meta Tags ---- */}
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
