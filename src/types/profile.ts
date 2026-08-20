@@ -36,6 +36,7 @@ export interface Experience {
   location: string;
   period: string;
   highlights: string[];
+  logo?: string;
 }
 
 export interface ProjectLinks {
@@ -51,6 +52,7 @@ export interface Project {
   stack: string[];
   highlights: string[];
   links: ProjectLinks;
+  logo?: string;
 }
 
 export interface Education {
@@ -60,4 +62,5 @@ export interface Education {
   location: string;
   period: string;
   coursework: string[];
+  logo?: string;
 }

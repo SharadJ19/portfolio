@@ -175,6 +175,15 @@
   border-radius: var(--radius-md);
   background: var(--tokyo-bg-highlight);
   color: var(--tokyo-cyan);
+  overflow: hidden; /* Added */
+}
+
+/* Add custom logo styling */
+.cardLogo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
 }
 
 .expBody {
@@ -299,12 +308,12 @@
 /* ---- Education ---- */
 .eduCard {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-4);
   padding: var(--space-5);
   background: var(--tokyo-bg-surface);
   border: var(--border-thin);
   border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
 }
 
 .eduHeader {

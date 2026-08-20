@@ -1,4 +1,4 @@
-import { MapPin, Mail, Phone, Code2, FileText } from 'lucide-react';
+import { MapPin, Mail, Phone, Code2, FileText, GraduationCap } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../common/Icons';
 import { profile, skills, experience, projects, education } from '../../data/profileData';
 import type { Skills } from '../../types/profile';
@@ -120,18 +120,31 @@ export default function ExecutiveView() {
       <section className={styles.section}>
         <h3 className={styles.sectionTitle}>Education</h3>
         {education.map((e) => (
-          <div key={e.id} className={styles.eduCard}>
-            <div className={styles.eduHeader}>
-              <span className={styles.eduDegree}>{e.degree}</span>
-              <span className={styles.eduPeriod}>{e.period}</span>
-            </div>
-            <span className={styles.eduInstitution}>
-              {e.institution} — {e.location}
-            </span>
-            <div className={styles.skillBadges}>
-              {e.coursework.map((c) => (
-                <Badge key={c}>{c}</Badge>
-              ))}
+          <div key={e.id} className={styles.eduCardLayout}>
+            {' '}
+            {/* Update wrapper class if desired */}
+            <div className={styles.eduCard}>
+              <div className={styles.expIcon}>
+                {e.logo ? (
+                  <img src={e.logo} alt={e.institution} className={styles.cardLogo} />
+                ) : (
+                  <GraduationCap size={18} />
+                )}
+              </div>
+              <div className={styles.expBody}>
+                <div className={styles.eduHeader}>
+                  <span className={styles.eduDegree}>{e.degree}</span>
+                  <span className={styles.eduPeriod}>{e.period}</span>
+                </div>
+                <span className={styles.eduInstitution}>
+                  {e.institution} — {e.location}
+                </span>
+                <div className={styles.skillBadges}>
+                  {e.coursework.map((c) => (
+                    <Badge key={c}>{c}</Badge>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         ))}

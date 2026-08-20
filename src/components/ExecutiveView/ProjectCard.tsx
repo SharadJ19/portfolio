@@ -12,7 +12,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className={styles.projectCard}>
       <div className={styles.expIcon}>
-        <FolderGit2 size={18} />
+        {project.logo ? (
+          <img src={project.logo} alt={project.name} className={styles.cardLogo} />
+        ) : (
+          <FolderGit2 size={18} />
+        )}
       </div>
       <div className={styles.projectBody}>
         <div className={styles.projectHeader}>

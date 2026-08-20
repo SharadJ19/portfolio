@@ -41,6 +41,7 @@ export const experience: Experience[] = [
     company: 'Quark Software Inc.',
     location: 'Mohali',
     period: 'Jan 2026 – June 2026',
+    logo: '/logos/quark.webp',
     highlights: [
       'Built and delivered 3 sidebar plugins using Angular and Node.js, reducing development time by 30%',
       'Designed a micro-frontend plugin system integrated with backend services, enabling independent deployments and scalability',
@@ -61,6 +62,7 @@ export const projects: Project[] = [
     id: 'chowkspot',
     name: 'ChowkSpot',
     subtitle: 'Real-Time P2P Marketplace Platform',
+    logo: '/logos/chowkspot.webp',
     description:
       'A full-stack local service marketplace connecting customers and service providers across 80+ specialized service categories.',
     stack: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Socket.io', 'JWT', 'Render'],
@@ -85,6 +87,7 @@ export const education: Education[] = [
     institution: 'Chitkara University',
     location: 'Himachal Pradesh',
     period: 'Graduated July 2026',
+    logo: '/logos/chitkara.webp',
     coursework: [
       'Data Structures',
       'Algorithms',

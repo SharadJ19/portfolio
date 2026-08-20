@@ -10,7 +10,11 @@ export default function ExperienceCard({ job }: ExperienceCardProps) {
   return (
     <article className={styles.expCard}>
       <div className={styles.expIcon}>
-        <Briefcase size={18} />
+        {job.logo ? (
+          <img src={job.logo} alt={job.company} className={styles.cardLogo} />
+        ) : (
+          <Briefcase size={18} />
+        )}
       </div>
       <div className={styles.expBody}>
         <div className={styles.expHeader}>
