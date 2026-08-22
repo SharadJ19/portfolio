@@ -26,11 +26,11 @@ export const profile: Profile = {
 };
 
 export const skills: Skills = {
-  languages: ['Java', 'JavaScript', 'TypeScript'],
+  languages: ['TypeScript', 'JavaScript', 'Java', 'SQL'],
   frontend: ['React', 'Angular', 'RxJS', 'Tailwind CSS', 'Responsive Design'],
-  backend: ['Node.js', 'Express.js', 'REST APIs', 'JWT'],
-  databases: ['PostgreSQL', 'Redis'],
-  tools: ['Docker', 'Git', 'Linux', 'Postman', 'Swagger', 'Jest', 'Selenium'],
+  backend: ['Node.js', 'Express.js', 'REST APIs', 'WebSockets', 'JWT'],
+  databases: ['PostgreSQL', 'Redis', 'Drizzle ORM'],
+  tools: ['Docker', 'Git', 'Linux', 'Postman', 'Swagger', 'Vitest', 'Playwright'],
   core: ['Data Structures & Algorithms', 'System Design', 'Microservices', 'Caching'],
 };
 
